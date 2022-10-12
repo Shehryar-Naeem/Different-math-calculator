@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import mathLogo from "./Images/mathProject.png"
+const App =()=>{
+    return (
+        <>
+            <section className="container">
+                <div className="left_container">
+                    <div className="img_container">
+                        <img src={mathLogo} alt="mathLogo"/>
+                    </div>
+                    <ul>
+                        <li>
+                            Simple Calculator
+                        </li>
+                        <li>Determination Calculator in matrix</li>
+                        <li>Adjoint Calculator in matrix</li>
+                    </ul>
+                </div>
+                <div className="right_container">
+                    <h1>Welcome to EasY MaTh with solution</h1>
+                    <div className="right_container_calculator_portion">
+                        <select>
+                            <option></option>
+                            <option>2*2 matrix</option>
+                            <option>3*3 matrix</option>
+                            <option>4*4 matrix</option>
+                            <option>5*5 matrix</option>
+                        </select>
+                    </div>
+                </div>
+            </section>     
+        </>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    )
 }
+
 
 export default App;
