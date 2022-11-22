@@ -1,0 +1,125 @@
+.input_grid_five{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    form{
+        .input_grid{
+
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(5,1fr);
+            gap: 0.5rem;
+            input{
+                width: 3rem;
+                height: 2rem; 
+                // padding-left: 0.5rem;
+                font-size: 1.2rem;
+            }
+        }
+        .btn{
+            margin-top: 0.5rem;
+            width: 100%;
+            button{
+                position: relative;
+                width: 100%;
+                height: 2rem;
+                border: none;
+                outline: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-transform: uppercase; 
+                letter-spacing: 0.2rem;
+                background: #333;
+                color: rgba(255, 255, 255, 0.5);
+                cursor: pointer;
+                span{
+                    display: inline-block;
+                    z-index: 2;
+                    transition: 0.5s ease-in-out;
+                }
+                &:hover span{
+                    color:#333;
+                }
+                i{
+                    position: relative;
+                    width: 2px;
+                    height: 20px;
+                    background: #d3d636;
+                    transition: 0.5s, width 0.5s, height 0.5s;
+                    transition-delay: 0s, 0.5s,1s;
+                }
+                &:hover i{
+                    width: 20px;
+                    height: 2px;
+                    background: #333;
+                    transition-delay: 0s,1s,0.5s;
+                }
+            }
+            button::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: #359ad8;
+                transform: scaleX(0);
+                transition: transform 0.5s ease-in-out;
+                transform-origin: right;
+            }
+            button:hover::before{
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+            button i::before{
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 2px;
+                top: 0;
+                right: 0;
+                rotate: 0;
+                background: transparent;
+                transition: 1s;
+                transform-origin: right;
+            }
+            button:hover i::before{
+                rotate: 45deg;
+                transition-delay: 1.3s;
+                background: #333;
+            }
+            button i::after{
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 2px;
+                top: 0;
+                right: 0;
+                rotate: 0;
+                background: transparent;
+                transition: 1s;
+                transform-origin: right;
+            }
+            button:hover i::after{
+                rotate: -45deg;
+                transition-delay: 1.3s;
+                background: #333;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

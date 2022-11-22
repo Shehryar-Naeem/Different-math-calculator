@@ -1,0 +1,116 @@
+.input_grid_three {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.input_grid_three form .input_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.input_grid_three form .input_grid input {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+.input_grid_three form .btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.input_grid_three form .btn button {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background: #333;
+  outline: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.input_grid_three form .btn button span {
+  z-index: 2;
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+}
+.input_grid_three form .btn button:hover span {
+  color: #333;
+}
+.input_grid_three form .btn button i {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #d3d636;
+  transition: 0.5s, width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.5s, 1s;
+}
+.input_grid_three form .btn button:hover i {
+  z-index: 2;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition-delay: 0s, 1s, 0.5s;
+}
+.input_grid_three form .btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #359ad8;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+.input_grid_three form .btn button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.input_grid_three form .btn button i::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: 0;
+  right: 0;
+  background: transparent;
+  rotate: 0;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_three form .btn button:hover i::before {
+  rotate: 45deg;
+  background: #333;
+  transition-delay: 1.3s;
+}
+.input_grid_three form .btn button i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_three form .btn button:hover i::after {
+  rotate: -45deg;
+  background: #333;
+  transition-delay: 1.3s;
+}
+
+/*# sourceMappingURL=ThreeByThree.css.map */

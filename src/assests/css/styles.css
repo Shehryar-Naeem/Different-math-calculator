@@ -19,7 +19,11 @@
   width: 100%;
   height: 100%;
 }
-.container .left_container ul li {
+.container .left_container ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.container .left_container ul a li {
   padding: 1rem 2rem;
   font-weight: bold;
   font-size: 1.2rem;
@@ -28,11 +32,11 @@
   transition: 0.2s linear;
   letter-spacing: 0.2rem;
 }
-.container .left_container ul li:hover {
+.container .left_container ul a li:hover {
   background: #fff;
   color: #000;
 }
-.container .left_container ul li::before {
+.container .left_container ul a li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -41,7 +45,7 @@
   height: 100%;
   transition: 0.2s linear;
 }
-.container .left_container ul li:hover::before {
+.container .left_container ul a li:hover::before {
   background: red;
 }
 .container .right_container {
@@ -50,28 +54,567 @@
   color: #000;
   border-radius: 0 1.5rem 1.5rem 0;
 }
-.container .right_container h1 {
+.container .right_container .right_container_header {
+  width: 100%;
+  background: #fff;
   border-radius: 0 1.5rem 0 0;
+  display: flex;
+  align-items: center;
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  gap: 0.5rem;
+}
+.container .right_container .right_container_header .right_container_header_heading {
+  flex: 2;
+  font-size: 1.3rem;
   letter-spacing: 0.2rem;
   font-weight: bold;
   color: #395B64;
-  background: #fff;
+}
+.container .right_container .right_container_header .right_container_header_timer {
+  flex: 1;
+  text-align: center;
+}
+.container .right_container .right_container_header .right_container_header_timer span {
+  color: #395B64;
+  font-weight: bold;
 }
 .container .right_container .right_container_calculator_portion {
   padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 .container .right_container .right_container_calculator_portion select {
-  width: 10rem;
+  width: 3rem;
   height: 1.5rem;
-  outline: none;
-  border: none;
-  border-bottom: 0.2rem solid #395B64;
+  border: 0.2rem solid #395B64;
   background: transparent;
 }
 .container .right_container .right_container_calculator_portion select option {
   font-size: 1.2rem;
+  text-align: center;
+}
+
+.input_grid_two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input_grid_two form .input_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.input_grid_two form .input_grid input {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+.input_grid_two form .btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.input_grid_two form .btn button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+  height: 2rem;
+  background: #333;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.input_grid_two form .btn button span {
+  display: inline-block;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+}
+.input_grid_two form .btn button:hover span {
+  color: #333;
+}
+.input_grid_two form .btn button i {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #d3d636;
+  transition: 0.5s, width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.5s, 1s;
+}
+.input_grid_two form .btn button:hover i {
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition-delay: 0s, 1s, 0.5s;
+}
+.input_grid_two form .btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #359ad8;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+.input_grid_two form .btn button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.input_grid_two form .btn button i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transform-origin: right;
+  transition: 1s;
+}
+.input_grid_two form .btn button:hover i::before {
+  background: #333;
+  rotate: 45deg;
+  transition-delay: 1.3s;
+}
+.input_grid_two form .btn button i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transform-origin: right;
+  transition: 1s;
+}
+.input_grid_two form .btn button:hover i::after {
+  background: #333;
+  rotate: -45deg;
+  transition-delay: 1.3s;
+}
+
+.input_grid_three {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.input_grid_three form .input_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.input_grid_three form .input_grid input {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+.input_grid_three form .btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.input_grid_three form .btn button {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background: #333;
+  outline: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.input_grid_three form .btn button span {
+  z-index: 2;
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+}
+.input_grid_three form .btn button:hover span {
+  color: #333;
+}
+.input_grid_three form .btn button i {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #d3d636;
+  transition: 0.5s, width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.5s, 1s;
+}
+.input_grid_three form .btn button:hover i {
+  z-index: 2;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition-delay: 0s, 1s, 0.5s;
+}
+.input_grid_three form .btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #359ad8;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+.input_grid_three form .btn button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.input_grid_three form .btn button i::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: 0;
+  right: 0;
+  background: transparent;
+  rotate: 0;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_three form .btn button:hover i::before {
+  rotate: 45deg;
+  background: #333;
+  transition-delay: 1.3s;
+}
+.input_grid_three form .btn button i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_three form .btn button:hover i::after {
+  rotate: -45deg;
+  background: #333;
+  transition-delay: 1.3s;
+}
+
+.input_grid_four {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.input_grid_four form .input_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.input_grid_four form .input_grid input {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+.input_grid_four form .btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.input_grid_four form .btn button {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  outline: none;
+  background: #333;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.input_grid_four form .btn button span {
+  z-index: 2;
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+}
+.input_grid_four form .btn button:hover span {
+  color: #333;
+}
+.input_grid_four form .btn button i {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #d3d636;
+  transition: 0.5s, width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.5s, 1s;
+}
+.input_grid_four form .btn button:hover i {
+  z-index: 2;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition-delay: 0s, 1s, 0.5s;
+}
+.input_grid_four form .btn button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #359ad8;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+.input_grid_four form .btn button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.input_grid_four form .btn button i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_four form .btn button:hover i::before {
+  rotate: 45deg;
+  background: #333;
+  transition-delay: 1.3s;
+}
+.input_grid_four form .btn button i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_four form .btn button:hover i::after {
+  rotate: -45deg;
+  background: #333;
+  transition-delay: 1.3s;
+}
+
+.input_grid_five {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.input_grid_five form .input_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+.input_grid_five form .input_grid input {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+.input_grid_five form .btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.input_grid_five form .btn button {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background: #333;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.input_grid_five form .btn button span {
+  display: inline-block;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+}
+.input_grid_five form .btn button:hover span {
+  color: #333;
+}
+.input_grid_five form .btn button i {
+  position: relative;
+  width: 2px;
+  height: 20px;
+  background: #d3d636;
+  transition: 0.5s, width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.5s, 1s;
+}
+.input_grid_five form .btn button:hover i {
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition-delay: 0s, 1s, 0.5s;
+}
+.input_grid_five form .btn button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #359ad8;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+.input_grid_five form .btn button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.input_grid_five form .btn button i::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: 0;
+  right: 0;
+  rotate: 0;
+  background: transparent;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_five form .btn button:hover i::before {
+  rotate: 45deg;
+  transition-delay: 1.3s;
+  background: #333;
+}
+.input_grid_five form .btn button i::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: 0;
+  right: 0;
+  rotate: 0;
+  background: transparent;
+  transition: 1s;
+  transform-origin: right;
+}
+.input_grid_five form .btn button:hover i::after {
+  rotate: -45deg;
+  transition-delay: 1.3s;
+  background: #333;
+}
+
+.header {
+  flex: 1;
+}
+
+.keypad {
+  flex: 1.2;
+  background: #9db3ed;
+}
+
+.simple {
+  background: #2B6B84;
+  border-radius: 0 1.5rem 1.5rem 0;
+  flex: 3;
+}
+.simple .simple_calculator {
+  margin: 1rem auto;
+  width: 280px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.simple .simple_calculator .simple_calculator_navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  min-height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.simple .simple_calculator .simple_calculator_navbar .simple_calculator_navbar_toggle {
+  height: 15px;
+  width: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 40px 80px rgba(0, 0, 0, 0.14);
+}
+.simple .simple_calculator .simple_calculator_navbar .simple_calculator_navbar_toggle .simple_calculator_navbar_toggle_circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 300ms;
+}
+.simple .simple_calculator .simple_calculator_navbar .simple_calculator_navbar_toggle .simple_calculator_navbar_toggle_circle_active {
+  transform: translateX(15px);
+}
+.simple .simple_calculator .simple_calculator_navbar img {
+  width: 20px;
+  height: 20px;
+}
+
+.adjoint {
+  background: #fff;
+  flex: 3;
+  border-radius: 0 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
 * {

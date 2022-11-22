@@ -1,0 +1,55 @@
+
+@use  "../HeaderOfSimpleCalculator/Header.scss";
+@use "../KeyPadOfSimpleCalculator/keyPad.scss";
+
+.simple{
+    background: #2B6B84;
+    border-radius: 0 1.5rem 1.5rem 0;
+    flex: 3;
+    .simple_calculator{
+        margin: 1rem auto;
+        width: 280px;
+        height: 500px;
+        border-radius: 20px;
+        box-shadow: 1px -1px 20px rgba(0,0,0,0.15);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .simple_calculator_navbar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            min-height: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow: hidden;
+            .simple_calculator_navbar_toggle{
+                height: 15px;
+                width: 30px;
+                border-radius: 20px;
+                box-shadow: 1px 1px 40px 80px rgba(0,0,0,0.14);
+                .simple_calculator_navbar_toggle_circle{
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    background: #fff;
+                    transition: 300ms;
+                }
+                .simple_calculator_navbar_toggle_circle_active{
+                    transform: translateX(15px);
+                }
+            }
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+}

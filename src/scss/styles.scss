@@ -1,4 +1,10 @@
 @use "./App/App.scss";
+@use "./inputGrids/TwobyTwo.scss";
+@use "./inputGrids//ThreeByThree.scss";
+@use "./inputGrids//FourByFour.scss";
+@use "./inputGrids/FiveByFive.scss";
+@use "./Calculator/SimpleCalculator.scss";
+@use "./AdjointCalculator/AdjointCalculator.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 *{
     padding: 0;
@@ -12,4 +18,5 @@ body{
     overflow-x: hidden;
     background: linear-gradient(to right,#103E3F,#395B64);
     font-family: 'Poppins', sans-serif;
+    
 }
