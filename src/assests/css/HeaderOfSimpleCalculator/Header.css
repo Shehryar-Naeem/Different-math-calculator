@@ -1,5 +1,57 @@
+.change_Header {
+  background-color: #172d67;
+  color: #fbfcfc;
+  flex: 1;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.change_Header p {
+  font-size: 1rem;
+  line-height: 1.875rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.change_Header .header_expression {
+  overflow-x: scroll;
+  width: 100%;
+}
+.change_Header .header_expression p {
+  white-space: nowrap;
+  min-width: 100%;
+  width: fit-content;
+  font-weight: bolder;
+}
+.change_Header .header_result {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+}
+
 .header {
   flex: 1;
+  background: #9db3ed;
+  padding: 20px;
+  overflow-y: scroll;
+  color: #0b1537;
+}
+.header p {
+  font-size: 1rem;
+  line-height: 1.875rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .header_expression {
+  overflow-x: scroll;
+  width: 100%;
+}
+.header .header_expression p {
+  white-space: nowrap;
+  min-width: 100%;
+  width: fit-content;
+  font-weight: bolder;
+}
+.header .header_result {
+  font-size: 1.3rem !important;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=Header.css.map */

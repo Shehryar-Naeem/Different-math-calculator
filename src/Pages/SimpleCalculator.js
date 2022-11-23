@@ -15,7 +15,7 @@ const SimpleCalculator=()=>{
                         </div>
                         <img src={isDarkMode?moon:sun} alt="Moon"/>
                     </div>
-                    <Header/>
+                    <Header isDarkMode={isDarkMode}/>
                     <KeyPad/>
                 </div>
             </div>

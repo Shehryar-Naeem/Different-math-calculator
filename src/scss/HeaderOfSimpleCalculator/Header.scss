@@ -1,4 +1,65 @@
+$bg-color-1: #172d67;
+$bg-color-2: #050c26;
+$text-color-1: #fbfcfc;
+$text-color-2: #bbbcbc;
+$bg-color-light-1: #9db3ed;
+$bg-color-light-2: #f9f9f9;
+$text-color-light-1: #0b1537;
+$text-color-light-2: #636363;
+.change_Header{
+    background-color: $bg-color-1;
+    color: $text-color-1;
+    flex: 1;
 
+    padding: 20px;
+    overflow-y: scroll;
+
+    p{
+        font-size: 1rem;
+        line-height: 1.875rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header_expression{
+        overflow-x: scroll;
+        width: 100%;
+        p{
+            white-space: nowrap;
+            min-width: 100%;
+            width: fit-content;
+            font-weight: bolder;
+        }
+    }
+    .header_result{
+        font-size: 1.3rem !important;
+        font-weight: bold;
+    }
+}
 .header{
     flex: 1;
+    background: $bg-color-light-1;
+    padding: 20px;
+    overflow-y: scroll;
+    color: $text-color-light-1;
+
+    p{
+        font-size: 1rem;
+        line-height: 1.875rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header_expression{
+        overflow-x: scroll;
+        width: 100%;
+        p{
+            white-space: nowrap;
+            min-width: 100%;
+            width: fit-content;
+            font-weight: bolder;
+        }
+    }
+    .header_result{
+        font-size: 1.3rem !important;
+        font-weight: bold;
+    }
 }
