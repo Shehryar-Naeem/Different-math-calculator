@@ -14,6 +14,7 @@
 .change_Header .header_expression {
   overflow-x: scroll;
   width: 100%;
+  min-height: 30px;
 }
 .change_Header .header_expression p {
   white-space: nowrap;
@@ -24,6 +25,7 @@
 .change_Header .header_result {
   font-size: 1.3rem !important;
   font-weight: bold;
+  min-height: 30px;
 }
 
 .header {
@@ -42,6 +44,7 @@
 .header .header_expression {
   overflow-x: scroll;
   width: 100%;
+  min-height: 30px;
 }
 .header .header_expression p {
   white-space: nowrap;
@@ -52,11 +55,82 @@
 .header .header_result {
   font-size: 1.3rem !important;
   font-weight: bold;
+  min-height: 30px;
+}
+
+.dark_keypad {
+  flex: 1.2;
+  display: flex;
+  padding: 20px;
+  background: #050c26;
+  color: #bbbcbc;
+}
+.dark_keypad p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.87rem;
+  font-size: 1.8rem;
+  transition: 2000s;
+  user-select: none;
+  cursor: pointer;
+}
+.dark_keypad .keypad_keys {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dark_keypad .keypad_keys p {
+  width: 33%;
+  height: 25%;
+}
+.dark_keypad .keypad_keys p:active {
+  background: rgba(0, 0, 0, 0.14);
+}
+.dark_keypad .keypad_symbols {
+  flex: 1;
+}
+.dark_keypad .keypad_symbols p {
+  width: 100%;
+  height: 20%;
+  color: #89a5f1;
 }
 
 .keypad {
   flex: 1.2;
-  background: #9db3ed;
+  display: flex;
+  padding: 20px;
+  background: #f9f9f9;
+  color: #636363;
+}
+.keypad p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.87rem;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.keypad .keypad_keys {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+.keypad .keypad_keys p {
+  width: 33%;
+  height: 25%;
+}
+.keypad .keypad_keys p:active {
+  background: rgba(0, 0, 0, 0.14);
+}
+.keypad .keypad_symbols {
+  flex: 1;
+}
+.keypad .keypad_symbols p {
+  width: 100%;
+  height: 20%;
+  color: #89a5f1;
 }
 
 .simple {

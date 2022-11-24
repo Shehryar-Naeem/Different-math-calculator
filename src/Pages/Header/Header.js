@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 
-const Header=({isDarkMode})=>{
+const Header=({isDarkMode,expression})=>{
  
-    
+    const resultRef= useRef()
+    useEffect(()=>{
+        resultRef.current.scrollIntoView({behavior:"smooth"})
+    },[])
     return (
         <>
             <div className={isDarkMode?"change_Header custom_scroll":"header custom_scroll"}>
@@ -20,9 +23,9 @@ const Header=({isDarkMode})=>{
                 </div>
                 <br/>
                 <div className="header_expression custom_scroll">
-                    <p>10+15+45</p>
+                    <p>{expression}</p>
                 </div>
-                <p className="header_result">9</p>
+                <p ref={resultRef} className="header_result">9</p>
             </div>
         </>
     )
