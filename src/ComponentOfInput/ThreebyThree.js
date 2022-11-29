@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 
+
 const ThreeByThree = () => {
   const [matrixVal,setMatrixVal]= useState({
-    c11:"",
-    c12:"",
-    c13:"",
-    c21:"",
-    c22:"",
-    c23:"",
-    c31:"",
-    c32:"",
-    c33:"",
+    a:"",
+    b:"",
+    c:"",
+    d:"", 
+    e:"",
+    f:"",
+    g:"",
+    h:"",
+    i:"",
   })
-  const [finalVal,setFinalVal]=useState({})
+  const [finalVal,setFinalVal]=useState("")
   const inputEventHandler=(e)=>{
     const {name,value}= e.target;
     setMatrixVal(preVal=>{
@@ -22,24 +23,39 @@ const ThreeByThree = () => {
       }
     })
   }
+
+  const determinantResult=()=>{
+    let op1,op2,op3,op4,op5,op6;
+    op1 = Number(matrixVal.a) * Number(matrixVal.e) * Number(matrixVal.i)
+    op2 = Number(matrixVal.a) * Number(matrixVal.h) * Number(matrixVal.f)
+    op3 = Number(matrixVal.b) * Number(matrixVal.d) * Number(matrixVal.i)
+    op4 = Number(matrixVal.b) * Number(matrixVal.g) * Number(matrixVal.f);
+    op5 = Number(matrixVal.c) * Number(matrixVal.d) * Number(matrixVal.h)
+    op6 = Number(matrixVal.c) * Number(matrixVal.g) * Number(matrixVal.e)
+    
+    const result = op1 - op2 - op3 + op4 + op5 - op6;
+
+    return result
+  }
   const submitHandler=(e)=>{
     e.preventDefault();
-    setFinalVal(matrixVal)
+    const determinant = determinantResult
+    setFinalVal(determinant)
   }
   return (
     <>
     <div className="input_grid_three">
       <form onSubmit={submitHandler}>
         <div className="input_grid">
-          <input type="number" name="c11" value={matrixVal.c11} onChange={inputEventHandler}/>
-          <input type="number" name="c12" value={matrixVal.c12} onChange={inputEventHandler}/>
-          <input type="number" name="c13" value={matrixVal.c13} onChange={inputEventHandler}/>
-          <input type="number" name="c21" value={matrixVal.c21} onChange={inputEventHandler}/>
-          <input type="number" name="c22" value={matrixVal.c22} onChange={inputEventHandler}/>
-          <input type="number" name="c23" value={matrixVal.c23} onChange={inputEventHandler}/>
-          <input type="number" name="c31" value={matrixVal.c31} onChange={inputEventHandler}/>
-          <input type="number" name="c32" value={matrixVal.c32} onChange={inputEventHandler}/>
-          <input type="number" name="c33" value={matrixVal.c33} onChange={inputEventHandler}/>
+          <input type="number" name="a" value={matrixVal.a} onChange={inputEventHandler}/>
+          <input type="number" name="b" value={matrixVal.b} onChange={inputEventHandler}/>
+          <input type="number" name="c" value={matrixVal.c} onChange={inputEventHandler}/>
+          <input type="number" name="d" value={matrixVal.d} onChange={inputEventHandler}/>
+          <input type="number" name="e" value={matrixVal.e} onChange={inputEventHandler}/>
+          <input type="number" name="f" value={matrixVal.f} onChange={inputEventHandler}/>
+          <input type="number" name="g" value={matrixVal.g} onChange={inputEventHandler}/>
+          <input type="number" name="h" value={matrixVal.h} onChange={inputEventHandler}/>
+          <input type="number" name="i" value={matrixVal.i} onChange={inputEventHandler}/>
         </div>
 
         <div className="btn">
@@ -71,12 +87,7 @@ const ThreeByThree = () => {
       <mo>]</mo>
    </mrow>
 </math> 
-      <p>{finalVal.c11}</p>
-      <p>{finalVal.c12}</p>
-
-      <p>{finalVal.c21}</p>
-
-      <p>{finalVal.c22}</p>
+      <p>{finalVal}</p>
     </div>
     </>
   );

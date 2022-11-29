@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AdjointCalculator from "./Pages/AjointCalculator";
 import SimpleCalculator from "./Pages/SimpleCalculator";
 import Home from "./Pages/Home";
+import DeterminantCalculator from "./Pages/DeterminantCalculator";
 
 
 // const month = [
@@ -67,7 +68,7 @@ const App = () => {
         <LeftSideComponent/>
         <Routes>
           <Route path="/" element={<SimpleCalculator/>}/>
-          <Route path="/determinant_calculator" element={<Home/>}/>
+          <Route path="/determinant_calculator" element={<DeterminantCalculator/>}/>
           <Route path="adjoint_calculator" element={<AdjointCalculator/>}/>
         </Routes>
         

@@ -2,25 +2,26 @@ import React, { useState } from "react";
 
 const FourByFour = () => {
   const [matrixVal, setMatrixVal] = useState({
-    c11: "",
-    c12: "",
-    c13: "",
-    c14: "",
-    c21: "",
-    c22: "",
-    c23: "",
-    c24: "",
-    c31: "",
-    c32: "",
-    c33: "",
-    c34: "",
-    c41: "",
-    c42: "",
-    c43: "",
-    c44: "",
+    a: "",
+    b: "",
+    c: "",
+    d: "",
+    e: "",
+    f: "",
+    g: "",
+    h: "",
+    i: "",
+    j: "",
+    k: "",
+    l: "",
+    m: "",
+    n: "",
+    o: "",
+    p: "",
   });
-  const inputEventHandler = (e) => {
-    const { name, value } = e.target;
+  const [finalResult,setFinanlResult]= useState("")
+  const inputEventHandler = (event) => {
+    const { name, value } = event.target;
     setMatrixVal((preVal) => {
       return {
         ...preVal,
@@ -28,10 +29,43 @@ const FourByFour = () => {
       };
     });
   };
-  const [val, setVal] = useState({});
-  const sumbitHandler = (e) => {
-    e.preventDefault();
-    setVal(matrixVal);
+  const determinantResult= ()=>{
+    let op1,op2,op3,op4,op5,op6,op7,op8,op9,op10,op11,op12,op13,op14,op15,op16,op17,op18,op19,op20,op21,op22,op23,op24;
+
+    op1 = Number(matrixVal.a) * Number(matrixVal.f) * Number(matrixVal.k) * Number(matrixVal.p)
+    op2 = Number(matrixVal.a) * Number(matrixVal.f) * Number(matrixVal.o) * Number(matrixVal.l)
+    op3 = Number(matrixVal.a) * Number(matrixVal.g) * Number(matrixVal.j) * Number(matrixVal.p)
+    op4 = Number(matrixVal.a) * Number(matrixVal.g) * Number(matrixVal.n) * Number(matrixVal.l) 
+    op5 = Number(matrixVal.a) * Number(matrixVal.j) * Number(matrixVal.h) * Number(matrixVal.o)
+    op6 = Number(matrixVal.a) * Number(matrixVal.h) * Number(matrixVal.n) * Number(matrixVal.k)
+    op7 = Number(matrixVal.b) * Number(matrixVal.e) * Number(matrixVal.k) * Number(matrixVal.p)
+    op8 = Number(matrixVal.b) * Number(matrixVal.e) * Number(matrixVal.o) * Number(matrixVal.l)
+    op9 = Number(matrixVal.b) * Number(matrixVal.g) * Number(matrixVal.i) * Number(matrixVal.p)
+    op10 = Number(matrixVal.b) * Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.l)
+    op11 = Number(matrixVal.b) * Number(matrixVal.h) * Number(matrixVal.i) * Number(matrixVal.o)
+    op12 = Number(matrixVal.b) * Number(matrixVal.h) * Number(matrixVal.m) * Number(matrixVal.k)
+    op13 = Number(matrixVal.c) * Number(matrixVal.e) * Number(matrixVal.j) * Number(matrixVal.p)
+    op14 = Number(matrixVal.c) * Number(matrixVal.e) * Number(matrixVal.n) * Number(matrixVal.l)
+    op15 = Number(matrixVal.c) * Number(matrixVal.f) * Number(matrixVal.i) * Number(matrixVal.p)
+    op16 = Number(matrixVal.c) * Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.l)
+    op17 = Number(matrixVal.c) * Number(matrixVal.h) * Number(matrixVal.i) * Number(matrixVal.n)
+    op18 = Number(matrixVal.c) * Number(matrixVal.h) * Number(matrixVal.j) * Number(matrixVal.m)
+    op19 = Number(matrixVal.d) * Number(matrixVal.e) * Number(matrixVal.j) * Number(matrixVal.o)
+    op20 = Number(matrixVal.d) * Number(matrixVal.e) * Number(matrixVal.n) * Number(matrixVal.k)
+    op21 = Number(matrixVal.d) * Number(matrixVal.f) * Number(matrixVal.i) * Number(matrixVal.o)
+    op22 = Number(matrixVal.d) * Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.k)
+    op23 = Number(matrixVal.d) * Number(matrixVal.g) * Number(matrixVal.i) * Number(matrixVal.n)
+    op24 = Number(matrixVal.d) * Number(matrixVal.g) * Number(matrixVal.j) * Number(matrixVal.m)
+
+    const result=  op1-op2-op3+op4+op5-op6-op7+op8+op9-op10-op11+op12+op13-op14-op15+op16+op17-op18-op19+op20+op21-op22-op23+op24;
+
+    return result;
+  }
+  const sumbitHandler = (event) => {
+    event.preventDefault();
+    const determinant= determinantResult;
+    setFinanlResult(determinant)
+
   };
   return (
     <div className="input_grid_four">
@@ -39,98 +73,98 @@ const FourByFour = () => {
         <div className="input_grid">
           <input
             type="number"
-            name="c11"
-            value={matrixVal.c11}
+            name="a"
+            value={matrixVal.a}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c12"
-            value={matrixVal.c12}
+            name="b"
+            value={matrixVal.b}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c13"
-            value={matrixVal.c13}
+            name="c"
+            value={matrixVal.c}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c14"
-            value={matrixVal.c14}
+            name="d"
+            value={matrixVal.d}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c21"
-            value={matrixVal.c21}
+            name="e"
+            value={matrixVal.e}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c22"
-            value={matrixVal.c22}
+            name="f"
+            value={matrixVal.f}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c23"
-            value={matrixVal.c23}
+            name="g"
+            value={matrixVal.g}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c24"
-            value={matrixVal.c24}
+            name="h"
+            value={matrixVal.h}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c31"
-            value={matrixVal.c31}
+            name="i"
+            value={matrixVal.i}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c32"
-            value={matrixVal.c32}
+            name="j"
+            value={matrixVal.j}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c33"
-            value={matrixVal.c33}
+            name="k"
+            value={matrixVal.k}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c34"
-            value={matrixVal.c34}
+            name="l"
+            value={matrixVal.l}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c41"
-            value={matrixVal.c41}
+            name="m"
+            value={matrixVal.m}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c42"
-            value={matrixVal.c42}
+            name="n"
+            value={matrixVal.n}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c43"
-            value={matrixVal.c43}
+            name="o"
+            value={matrixVal.o}
             onChange={inputEventHandler}
           />
           <input
             type="number"
-            name="c44"
-            value={matrixVal.c44}
+            name="p"
+            value={matrixVal.p}
             onChange={inputEventHandler}
           />
         </div>
@@ -141,22 +175,8 @@ const FourByFour = () => {
           </button>
         </div>
       </form>
-      <p>{val.c11}</p>
-      <p>{val.c12}</p>
-      <p>{val.c13}</p>
-      <p>{val.c14}</p>
-      <p>{val.c21}</p>
-      <p>{val.c22}</p>
-      <p>{val.c23}</p>
-      <p>{val.c24}</p>
-      <p>{val.c31}</p>
-      <p>{val.c32}</p>
-      <p>{val.c33}</p>
-      <p>{val.c34}</p>
-      <p>{val.c41}</p>
-      <p>{val.c42}</p>
-      <p>{val.c43}</p>
-      <p>{val.c44}</p>
+      <h1>{finalResult}</h1>
+      
     </div>
   );
 };

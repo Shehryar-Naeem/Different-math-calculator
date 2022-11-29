@@ -6,7 +6,7 @@ import KeyPad from "./KeyPad/KeyPad";
 const SimpleCalculator = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [expression, setExpression] = useState("");
-  const [result, setResult] = useState("");
+  // const [result, setResult] = useState("");
 
   const useKeyCode = [
     48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 96, 97, 98, 99, 100, 101, 102, 103,
@@ -29,7 +29,12 @@ const SimpleCalculator = () => {
         const lastChar= expression.slice(-1);
         if(operator.includes(lastChar)) return
         if(lastChar=== ".") return
-        setExpression(expression+ key )
+        setExpression(expression+ key)
+    }else if(key==="."){
+      if(!expression) return 
+      const lastChar = expression.slice(-1)
+      if(!number.includes(lastChar)) return
+      setExpression(expression+ key)
     }else if(keyCode ===8){
         if(!expression) return
 

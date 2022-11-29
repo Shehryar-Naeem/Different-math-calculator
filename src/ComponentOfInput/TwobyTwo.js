@@ -2,34 +2,45 @@ import React,{useState} from "react";
 // import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 const TwobyTwo = () => {
+  
   const [matrixVal,setMatrixVal]= useState({
-    c11:"",
-    c12:"",
-    c21:"",
-    c22:""
+    a:"",
+    b:"",
+    c:"",
+    d:"", 
   })
-  const [initVal,setInitVal]= useState({
-    c11:"c11",
-    c12:"c12",
-    c21:"c21",
-    c22:"c22"
-  })
-  const [Val,setVal]= useState({})
 
-  const inputEventHandler=(e)=>{
-    const {name,value}= e.target;
-  setMatrixVal(preVal=>{
-    return {
-      ...preVal,
-      [name]:value
-    }
-  })
+  const [finalResult, setFinanlResult] = useState("")
+
+  const inputEventHandler=(event)=>{
+    const {name,value}= event.target;
+
+    setMatrixVal((preVal)=>{
+      return {
+        ...preVal,
+        [name]:value
+      }
+    })
   }
+  const determinantResult=()=>{
+    let op1,op2;
+    op1= Number(matrixVal.a) * Number(matrixVal.d);
+    op2= Number(matrixVal.c) * Number(matrixVal.b)
 
-  const submitHandler=(e)=>{
-    e.preventDefault()
-    setVal(matrixVal)
-    setInitVal(matrixVal)
+    const result = Math.round((op1 - op2)*100)/100 ;
+
+    return result
+
+
+  }
+  const submitHandler=(event)=>{
+    event.preventDefault();
+
+    const determinant = determinantResult();
+
+    setFinanlResult(determinant)
+
+
 
   }
   return (
@@ -37,16 +48,16 @@ const TwobyTwo = () => {
     <div className="input_grid_two">
       <form onSubmit={submitHandler}>
         <div className="input_grid">
-        <input type="number" name="c11" value={matrixVal.c11} onChange={inputEventHandler}/>
-        <input type="number" name="c12" value={matrixVal.c12} onChange={inputEventHandler}/>
-        <input type="number" name="c21" value={matrixVal.c21} onChange={inputEventHandler}/>
-        <input type="number" name="c22" value={matrixVal.c22} onChange={inputEventHandler}/>
+        <input type="number" name="a" value={matrixVal.a} onChange={inputEventHandler}/>
+        <input type="number" name="b" value={matrixVal.b} onChange={inputEventHandler}/>
+        <input type="number" name="c" value={matrixVal.c} onChange={inputEventHandler}/>
+        <input type="number" name="d" value={matrixVal.d} onChange={inputEventHandler}/>
         </div>
         <div className="btn">
           <button type="submit"><i></i><span>solution</span></button>
         </div>
       </form>
-      
+      <h1>{finalResult}</h1>
     </div>
       </>
   );
