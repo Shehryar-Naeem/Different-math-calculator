@@ -13,7 +13,6 @@ const ThreeByThree = () => {
     h:"",
     i:"",
   })
-  const [finalVal,setFinalVal]=useState("")
   const inputEventHandler=(e)=>{
     const {name,value}= e.target;
     setMatrixVal(preVal=>{
@@ -24,23 +23,10 @@ const ThreeByThree = () => {
     })
   }
 
-  const determinantResult=()=>{
-    let op1,op2,op3,op4,op5,op6;
-    op1 = Number(matrixVal.a) * Number(matrixVal.e) * Number(matrixVal.i)
-    op2 = Number(matrixVal.a) * Number(matrixVal.h) * Number(matrixVal.f)
-    op3 = Number(matrixVal.b) * Number(matrixVal.d) * Number(matrixVal.i)
-    op4 = Number(matrixVal.b) * Number(matrixVal.g) * Number(matrixVal.f);
-    op5 = Number(matrixVal.c) * Number(matrixVal.d) * Number(matrixVal.h)
-    op6 = Number(matrixVal.c) * Number(matrixVal.g) * Number(matrixVal.e)
-    
-    const result = op1 - op2 - op3 + op4 + op5 - op6;
-
-    return result
-  }
+ 
   const submitHandler=(e)=>{
     e.preventDefault();
-    const determinant = determinantResult
-    setFinalVal(determinant)
+ 
   }
   return (
     <>
@@ -62,7 +48,7 @@ const ThreeByThree = () => {
           <button type="submit"><i></i><span>solution</span></button>
         </div>
       </form>
-      <p>{finalVal}</p>
+   
     </div>
     </>
   );
