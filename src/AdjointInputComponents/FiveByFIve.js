@@ -75,6 +75,12 @@ const FiveByFive = () => {
     rc42: "",
     rc43: "",
     rc44: "",
+    rc45: "",
+    rc51: "",
+    rc52: "",
+    rc53: "",
+    rc54: "",
+    rc55: "",
   });
   const inputEventHandler = (event) => {
     const { name, value } = event.target;
@@ -1568,6 +1574,474 @@ const FiveByFive = () => {
 
     return result;
   }
+  const C45 = () =>{
+    let op1,
+      op2,
+      op3,
+      op4,
+      op5,
+      op6,
+      op7,
+      op8,
+      op9,
+      op10,
+      op11,
+      op12,
+      op13,
+      op14,
+      op15,
+      op16,
+      op17,
+      op18,
+      op19,
+      op20,
+      op21,
+      op22,
+      op23,
+      op24,
+      innerop1,
+      innerop2,
+      innerop3,
+      innerop4,
+      m45,
+      result;
+
+    op1 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.x);
+    op2 = Number(matrixVal.g) * Number(matrixVal.w) * Number(matrixVal.n);
+    op3 = Number(matrixVal.h) * Number(matrixVal.l) * Number(matrixVal.x);
+    op4 = Number(matrixVal.h) * Number(matrixVal.v) * Number(matrixVal.n);
+    op5 = Number(matrixVal.i) * Number(matrixVal.l) * Number(matrixVal.w);
+    op6 = Number(matrixVal.i) * Number(matrixVal.v) * Number(matrixVal.m);
+
+    innerop1 = op1 - op2 - op3 + op4 + op5 - op6;
+
+    op7 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.x);
+    op8 = Number(matrixVal.f) * Number(matrixVal.w) * Number(matrixVal.n);
+    op9 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.x);
+    op10 = Number(matrixVal.h) * Number(matrixVal.u) * Number(matrixVal.n);
+    op11 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.w);
+    op12 = Number(matrixVal.i) * Number(matrixVal.u) * Number(matrixVal.m);
+
+    innerop2 = op7 - op8 - op9 + op10 + op11 - op12;
+
+    op13 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.x);
+    op14 = Number(matrixVal.f) * Number(matrixVal.v) * Number(matrixVal.n);
+    op15 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.x);
+    op16 = Number(matrixVal.g) * Number(matrixVal.u) * Number(matrixVal.n);
+    op17 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.v);
+    op18 = Number(matrixVal.i) * Number(matrixVal.u) * Number(matrixVal.l);
+
+    innerop3 = op13 - op14 - op15 + op16 + op17 - op18;
+
+    op19 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.w);
+    op20 = Number(matrixVal.f) * Number(matrixVal.v) * Number(matrixVal.m);
+    op21 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.w);
+    op22 = Number(matrixVal.g) * Number(matrixVal.u) * Number(matrixVal.m);
+    op23 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.v);
+    op24 = Number(matrixVal.h) * Number(matrixVal.u) * Number(matrixVal.l);
+
+    innerop4 = op19 - op20 - op21 + op22 + op23 - op24;
+
+    m45 =
+      Number(matrixVal.a) * innerop1 -
+      Number(matrixVal.b) * innerop2 +
+      Number(matrixVal.c) * innerop3 -
+      Number(matrixVal.d) * innerop4;
+
+    result = Math.pow(-1, 4 + 5) * m45;
+
+    return result;
+  }
+  const C51 = () =>{
+    let op1,
+      op2,
+      op3,
+      op4,
+      op5,
+      op6,
+      op7,
+      op8,
+      op9,
+      op10,
+      op11,
+      op12,
+      op13,
+      op14,
+      op15,
+      op16,
+      op17,
+      op18,
+      op19,
+      op20,
+      op21,
+      op22,
+      op23,
+      op24,
+      innerop1,
+      innerop2,
+      innerop3,
+      innerop4,
+      m51,
+      result;
+
+    op1 = Number(matrixVal.h) * Number(matrixVal.n) * Number(matrixVal.t);
+    op2 = Number(matrixVal.h) * Number(matrixVal.s) * Number(matrixVal.o);
+    op3 = Number(matrixVal.i) * Number(matrixVal.m) * Number(matrixVal.t);
+    op4 = Number(matrixVal.i) * Number(matrixVal.r) * Number(matrixVal.o);
+    op5 = Number(matrixVal.j) * Number(matrixVal.m) * Number(matrixVal.s);
+    op6 = Number(matrixVal.j) * Number(matrixVal.r) * Number(matrixVal.n);
+
+    innerop1 = op1 - op2 - op3 + op4 + op5 - op6;
+
+    op7 = Number(matrixVal.g) * Number(matrixVal.n) * Number(matrixVal.t);
+    op8 = Number(matrixVal.g) * Number(matrixVal.s) * Number(matrixVal.o);
+    op9 = Number(matrixVal.i) * Number(matrixVal.l) * Number(matrixVal.t);
+    op10 = Number(matrixVal.i) * Number(matrixVal.q) * Number(matrixVal.o);
+    op11 = Number(matrixVal.j) * Number(matrixVal.l) * Number(matrixVal.s);
+    op12 = Number(matrixVal.j) * Number(matrixVal.q) * Number(matrixVal.n);
+
+    innerop2 = op7 - op8 - op9 + op10 + op11 - op12;
+
+    op13 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.t);
+    op14 = Number(matrixVal.g) * Number(matrixVal.r) * Number(matrixVal.o);
+    op15 = Number(matrixVal.h) * Number(matrixVal.l) * Number(matrixVal.t);
+    op16 = Number(matrixVal.h) * Number(matrixVal.q) * Number(matrixVal.o);
+    op17 = Number(matrixVal.j) * Number(matrixVal.l) * Number(matrixVal.r);
+    op18 = Number(matrixVal.j) * Number(matrixVal.q) * Number(matrixVal.m);
+
+    innerop3 = op13 - op14 - op15 + op16 + op17 - op18;
+
+    op19 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.s);
+    op20 = Number(matrixVal.g) * Number(matrixVal.r) * Number(matrixVal.n);
+    op21 = Number(matrixVal.h) * Number(matrixVal.l) * Number(matrixVal.s);
+    op22 = Number(matrixVal.h) * Number(matrixVal.q) * Number(matrixVal.n);
+    op23 = Number(matrixVal.i) * Number(matrixVal.l) * Number(matrixVal.r);
+    op24 = Number(matrixVal.i) * Number(matrixVal.q) * Number(matrixVal.m);
+
+    innerop4 = op19 - op20 - op21 + op22 + op23 - op24;
+
+    m51 =
+      Number(matrixVal.b) * innerop1 -
+      Number(matrixVal.c) * innerop2 +
+      Number(matrixVal.d) * innerop3 -
+      Number(matrixVal.e) * innerop4;
+
+    result = Math.pow(-1, 5 + 1) * m51;
+
+    return result;
+  }
+  const C52 = () =>{
+    let op1,
+      op2,
+      op3,
+      op4,
+      op5,
+      op6,
+      op7,
+      op8,
+      op9,
+      op10,
+      op11,
+      op12,
+      op13,
+      op14,
+      op15,
+      op16,
+      op17,
+      op18,
+      op19,
+      op20,
+      op21,
+      op22,
+      op23,
+      op24,
+      innerop1,
+      innerop2,
+      innerop3,
+      innerop4,
+      m52,
+      result;
+
+    op1 = Number(matrixVal.h) * Number(matrixVal.n) * Number(matrixVal.t);
+    op2 = Number(matrixVal.h) * Number(matrixVal.s) * Number(matrixVal.o);
+    op3 = Number(matrixVal.i) * Number(matrixVal.m) * Number(matrixVal.t);
+    op4 = Number(matrixVal.i) * Number(matrixVal.r) * Number(matrixVal.o);
+    op5 = Number(matrixVal.j) * Number(matrixVal.m) * Number(matrixVal.s);
+    op6 = Number(matrixVal.j) * Number(matrixVal.r) * Number(matrixVal.n);
+
+    innerop1 = op1 - op2 - op3 + op4 + op5 - op6;
+
+    op7 = Number(matrixVal.f) * Number(matrixVal.n) * Number(matrixVal.t);
+    op8 = Number(matrixVal.f) * Number(matrixVal.s) * Number(matrixVal.o);
+    op9 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.t);
+    op10 = Number(matrixVal.i) * Number(matrixVal.p) * Number(matrixVal.o);
+    op11 = Number(matrixVal.j) * Number(matrixVal.k) * Number(matrixVal.s);
+    op12 = Number(matrixVal.j) * Number(matrixVal.p) * Number(matrixVal.n);
+
+    innerop2 = op7 - op8 - op9 + op10 + op11 - op12;
+
+    op13 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.t);
+    op14 = Number(matrixVal.f) * Number(matrixVal.r) * Number(matrixVal.o);
+    op15 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.t);
+    op16 = Number(matrixVal.h) * Number(matrixVal.p) * Number(matrixVal.o);
+    op17 = Number(matrixVal.j) * Number(matrixVal.k) * Number(matrixVal.r);
+    op18 = Number(matrixVal.j) * Number(matrixVal.p) * Number(matrixVal.m);
+
+    innerop3 = op13 - op14 - op15 + op16 + op17 - op18;
+
+    op19 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.s);
+    op20 = Number(matrixVal.f) * Number(matrixVal.r) * Number(matrixVal.n);
+    op21 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.s);
+    op22 = Number(matrixVal.h) * Number(matrixVal.p) * Number(matrixVal.n);
+    op23 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.r);
+    op24 = Number(matrixVal.i) * Number(matrixVal.p) * Number(matrixVal.m);
+
+    innerop4 = op19 - op20 - op21 + op22 + op23 - op24;
+
+    m52 =
+      Number(matrixVal.a) * innerop1 -
+      Number(matrixVal.c) * innerop2 +
+      Number(matrixVal.d) * innerop3 -
+      Number(matrixVal.e) * innerop4;
+
+    result = Math.pow(-1, 5 + 2) * m52;
+
+    return result;
+  }
+  const C53 = () =>{
+    let op1,
+      op2,
+      op3,
+      op4,
+      op5,
+      op6,
+      op7,
+      op8,
+      op9,
+      op10,
+      op11,
+      op12,
+      op13,
+      op14,
+      op15,
+      op16,
+      op17,
+      op18,
+      op19,
+      op20,
+      op21,
+      op22,
+      op23,
+      op24,
+      innerop1,
+      innerop2,
+      innerop3,
+      innerop4,
+      m53,
+      result;
+
+    op1 = Number(matrixVal.g) * Number(matrixVal.n) * Number(matrixVal.t);
+    op2 = Number(matrixVal.g) * Number(matrixVal.s) * Number(matrixVal.o);
+    op3 = Number(matrixVal.i) * Number(matrixVal.l) * Number(matrixVal.t);
+    op4 = Number(matrixVal.i) * Number(matrixVal.q) * Number(matrixVal.o);
+    op5 = Number(matrixVal.j) * Number(matrixVal.l) * Number(matrixVal.s);
+    op6 = Number(matrixVal.j) * Number(matrixVal.q) * Number(matrixVal.n);
+
+    innerop1 = op1 - op2 - op3 + op4 + op5 - op6;
+
+    op7 = Number(matrixVal.f) * Number(matrixVal.n) * Number(matrixVal.t);
+    op8 = Number(matrixVal.f) * Number(matrixVal.s) * Number(matrixVal.o);
+    op9 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.t);
+    op10 = Number(matrixVal.i) * Number(matrixVal.p) * Number(matrixVal.o);
+    op11 = Number(matrixVal.j) * Number(matrixVal.k) * Number(matrixVal.s);
+    op12 = Number(matrixVal.j) * Number(matrixVal.p) * Number(matrixVal.n);
+
+    innerop2 = op7 - op8 - op9 + op10 + op11 - op12;
+
+    op13 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.t);
+    op14 = Number(matrixVal.f) * Number(matrixVal.q) * Number(matrixVal.o);
+    op15 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.t);
+    op16 = Number(matrixVal.g) * Number(matrixVal.p) * Number(matrixVal.o);
+    op17 = Number(matrixVal.j) * Number(matrixVal.k) * Number(matrixVal.q);
+    op18 = Number(matrixVal.j) * Number(matrixVal.p) * Number(matrixVal.l);
+
+    innerop3 = op13 - op14 - op15 + op16 + op17 - op18;
+
+    op19 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.s);
+    op20 = Number(matrixVal.f) * Number(matrixVal.q) * Number(matrixVal.n);
+    op21 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.s);
+    op22 = Number(matrixVal.g) * Number(matrixVal.p) * Number(matrixVal.n);
+    op23 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.q);
+    op24 = Number(matrixVal.i) * Number(matrixVal.p) * Number(matrixVal.l);
+
+    innerop4 = op19 - op20 - op21 + op22 + op23 - op24;
+
+    m53 =
+      Number(matrixVal.a) * innerop1 -
+      Number(matrixVal.b) * innerop2 +
+      Number(matrixVal.d) * innerop3 -
+      Number(matrixVal.e) * innerop4;
+
+    result = Math.pow(-1, 5 + 3) * m53;
+
+    return result;
+  }
+  const C54 = () =>{
+    let op1,
+      op2,
+      op3,
+      op4,
+      op5,
+      op6,
+      op7,
+      op8,
+      op9,
+      op10,
+      op11,
+      op12,
+      op13,
+      op14,
+      op15,
+      op16,
+      op17,
+      op18,
+      op19,
+      op20,
+      op21,
+      op22,
+      op23,
+      op24,
+      innerop1,
+      innerop2,
+      innerop3,
+      innerop4,
+      m54,
+      result;
+
+    op1 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.t);
+    op2 = Number(matrixVal.g) * Number(matrixVal.r) * Number(matrixVal.o);
+    op3 = Number(matrixVal.h) * Number(matrixVal.l) * Number(matrixVal.t);
+    op4 = Number(matrixVal.h) * Number(matrixVal.q) * Number(matrixVal.o);
+    op5 = Number(matrixVal.j) * Number(matrixVal.l) * Number(matrixVal.r);
+    op6 = Number(matrixVal.j) * Number(matrixVal.q) * Number(matrixVal.m);
+
+    innerop1 = op1 - op2 - op3 + op4 + op5 - op6;
+
+    op7 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.t);
+    op8 = Number(matrixVal.f) * Number(matrixVal.r) * Number(matrixVal.o);
+    op9 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.t);
+    op10 = Number(matrixVal.h) * Number(matrixVal.p) * Number(matrixVal.o);
+    op11 = Number(matrixVal.j) * Number(matrixVal.k) * Number(matrixVal.r);
+    op12 = Number(matrixVal.j) * Number(matrixVal.p) * Number(matrixVal.m);
+
+    innerop2 = op7 - op8 - op9 + op10 + op11 - op12;
+
+    op13 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.t);
+    op14 = Number(matrixVal.f) * Number(matrixVal.q) * Number(matrixVal.o);
+    op15 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.t);
+    op16 = Number(matrixVal.g) * Number(matrixVal.p) * Number(matrixVal.o);
+    op17 = Number(matrixVal.j) * Number(matrixVal.k) * Number(matrixVal.q);
+    op18 = Number(matrixVal.j) * Number(matrixVal.p) * Number(matrixVal.l);
+
+    innerop3 = op13 - op14 - op15 + op16 + op17 - op18;
+
+    op19 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.r);
+    op20 = Number(matrixVal.f) * Number(matrixVal.q) * Number(matrixVal.m);
+    op21 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.r);
+    op22 = Number(matrixVal.g) * Number(matrixVal.p) * Number(matrixVal.m);
+    op23 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.q);
+    op24 = Number(matrixVal.h) * Number(matrixVal.p) * Number(matrixVal.l);
+
+    innerop4 = op19 - op20 - op21 + op22 + op23 - op24;
+
+    m54 =
+      Number(matrixVal.a) * innerop1 -
+      Number(matrixVal.b) * innerop2 +
+      Number(matrixVal.c) * innerop3 -
+      Number(matrixVal.e) * innerop4;
+
+    result = Math.pow(-1, 5 + 4) * m54;
+
+    return result;
+  }
+  const C55 = () =>{
+    let op1,
+      op2,
+      op3,
+      op4,
+      op5,
+      op6,
+      op7,
+      op8,
+      op9,
+      op10,
+      op11,
+      op12,
+      op13,
+      op14,
+      op15,
+      op16,
+      op17,
+      op18,
+      op19,
+      op20,
+      op21,
+      op22,
+      op23,
+      op24,
+      innerop1,
+      innerop2,
+      innerop3,
+      innerop4,
+      m55,
+      result;
+
+    op1 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.s);
+    op2 = Number(matrixVal.g) * Number(matrixVal.r) * Number(matrixVal.n);
+    op3 = Number(matrixVal.h) * Number(matrixVal.l) * Number(matrixVal.s);
+    op4 = Number(matrixVal.h) * Number(matrixVal.q) * Number(matrixVal.n);
+    op5 = Number(matrixVal.i) * Number(matrixVal.l) * Number(matrixVal.r);
+    op6 = Number(matrixVal.i) * Number(matrixVal.q) * Number(matrixVal.m);
+
+    innerop1 = op1 - op2 - op3 + op4 + op5 - op6;
+
+    op7 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.s);
+    op8 = Number(matrixVal.f) * Number(matrixVal.r) * Number(matrixVal.n);
+    op9 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.s);
+    op10 = Number(matrixVal.h) * Number(matrixVal.p) * Number(matrixVal.n);
+    op11 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.r);
+    op12 = Number(matrixVal.i) * Number(matrixVal.p) * Number(matrixVal.m);
+
+    innerop2 = op7 - op8 - op9 + op10 + op11 - op12;
+
+    op13 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.s);
+    op14 = Number(matrixVal.f) * Number(matrixVal.q) * Number(matrixVal.n);
+    op15 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.s);
+    op16 = Number(matrixVal.g) * Number(matrixVal.p) * Number(matrixVal.n);
+    op17 = Number(matrixVal.i) * Number(matrixVal.k) * Number(matrixVal.q);
+    op18 = Number(matrixVal.i) * Number(matrixVal.p) * Number(matrixVal.l);
+
+    innerop3 = op13 - op14 - op15 + op16 + op17 - op18;
+
+    op19 = Number(matrixVal.f) * Number(matrixVal.l) * Number(matrixVal.r);
+    op20 = Number(matrixVal.f) * Number(matrixVal.q) * Number(matrixVal.m);
+    op21 = Number(matrixVal.g) * Number(matrixVal.k) * Number(matrixVal.r);
+    op22 = Number(matrixVal.g) * Number(matrixVal.p) * Number(matrixVal.m);
+    op23 = Number(matrixVal.h) * Number(matrixVal.k) * Number(matrixVal.q);
+    op24 = Number(matrixVal.h) * Number(matrixVal.p) * Number(matrixVal.l);
+
+    innerop4 = op19 - op20 - op21 + op22 + op23 - op24;
+
+    m55 =
+      Number(matrixVal.a) * innerop1 -
+      Number(matrixVal.b) * innerop2 +
+      Number(matrixVal.c) * innerop3 -
+      Number(matrixVal.d) * innerop4;
+
+    result = Math.pow(-1, 5 + 5) * m55;
+
+    return result;
+  }
   const submitHandler = (event) => {
     event.preventDefault();
     const adjoint11 = C11();
@@ -1589,8 +2063,12 @@ const FiveByFive = () => {
     const adjoint42 = C42();
     const adjoint43 = C43();
     const adjoint44 = C44();
-
-
+    const adjoint45 = C45();
+    const adjoint51 = C51();
+    const adjoint52 = C52();
+    const adjoint53 = C53();
+    const adjoint54 = C54();
+    const adjoint55 = C55();
     SetFinalResult((preVal) => ({
       ...preVal,
       rc11: adjoint11,
@@ -1662,7 +2140,7 @@ const FiveByFive = () => {
         rc33 : adjoint33
       }
     ))
-      SetFinalResult((preVal)=>(
+    SetFinalResult((preVal)=>(
       {
         ...preVal,
         rc34 : adjoint34
@@ -1696,6 +2174,42 @@ const FiveByFive = () => {
       {
         ...preVal,
         rc44 : adjoint44
+      }
+    ))
+    SetFinalResult((preVal)=>(
+      {
+        ...preVal,
+        rc45 : adjoint45
+      }
+    ))
+    SetFinalResult((preVal)=>(
+      {
+        ...preVal,
+        rc51 : adjoint51
+      }
+    ))
+    SetFinalResult((preVal)=>(
+      {
+        ...preVal,
+        rc52 : adjoint52
+      }
+    ))
+    SetFinalResult((preVal)=>(
+      {
+        ...preVal,
+        rc53 : adjoint53
+      }
+    ))
+    SetFinalResult((preVal)=>(
+      {
+        ...preVal,
+        rc54 : adjoint54
+      }
+    ))
+    SetFinalResult((preVal)=>(
+      {
+        ...preVal,
+        rc55 : adjoint55
       }
     ))
   };
@@ -1881,6 +2395,12 @@ const FiveByFive = () => {
       <h2>{finalResult.rc42}</h2>
       <h2>{finalResult.rc43}</h2>
       <h2>{finalResult.rc44}</h2>
+      <h2>{finalResult.rc45}</h2>
+      <h2>{finalResult.rc51}</h2>
+      <h2>{finalResult.rc52}</h2>
+      <h2>{finalResult.rc53}</h2>
+      <h2>{finalResult.rc54}</h2>
+      <h2>{finalResult.rc55}</h2>
     </div>
   );
 };
