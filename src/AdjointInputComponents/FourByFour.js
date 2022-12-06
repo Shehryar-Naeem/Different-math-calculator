@@ -20,7 +20,18 @@ const FourByFour = () => {
     p: "",
   });
   const [finalResult,setFinanlResult]= useState({
-    rc11: ""
+    rc11: "",
+    rc12: "",
+    rc13: "",
+    rc14: "",
+    rc21: "",
+    rc22: "",
+    rc23: "",
+    rc24: "",
+    rc31: "",
+    rc32: "",
+    rc33: "",
+    rc34: "",
   })
   const inputEventHandler = (event) => {
     const { name, value } = event.target;
@@ -43,13 +54,229 @@ const FourByFour = () => {
     result = Math.pow(-1 , 1+1) * m11;
     return result  
   }
+  const C12 =()=>{
+    let op1,op2,op3,op4,op5,op6,m12,result;
+    op1 = Number(matrixVal.e) * Number(matrixVal.k) * Number(matrixVal.p)
+    op2 = Number(matrixVal.e) * Number(matrixVal.o) * Number(matrixVal.l)
+    op3 = Number(matrixVal.g) * Number(matrixVal.i) * Number(matrixVal.p)
+    op4 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.l)
+    op5 = Number(matrixVal.h) * Number(matrixVal.i) * Number(matrixVal.o)
+    op6 = Number(matrixVal.h) * Number(matrixVal.m) * Number(matrixVal.k)
+    m12 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 1+2) * m12;
+    return result  
+  }
+  const C13 =()=>{
+    let op1,op2,op3,op4,op5,op6,m13,result;
+    op1 = Number(matrixVal.e) * Number(matrixVal.j) * Number(matrixVal.p)
+    op2 = Number(matrixVal.e) * Number(matrixVal.n) * Number(matrixVal.l)
+    op3 = Number(matrixVal.f) * Number(matrixVal.i) * Number(matrixVal.p)
+    op4 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.l)
+    op5 = Number(matrixVal.h) * Number(matrixVal.i) * Number(matrixVal.n)
+    op6 = Number(matrixVal.h) * Number(matrixVal.m) * Number(matrixVal.j)
+    m13 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 1+3) * m13;
+    return result  
+  }
+  const C14 =()=>{
+    let op1,op2,op3,op4,op5,op6,m14,result;
+    op1 = Number(matrixVal.e) * Number(matrixVal.j) * Number(matrixVal.o)
+    op2 = Number(matrixVal.e) * Number(matrixVal.n) * Number(matrixVal.k)
+    op3 = Number(matrixVal.f) * Number(matrixVal.i) * Number(matrixVal.o)
+    op4 = Number(matrixVal.f) * Number(matrixVal.m) * Number(matrixVal.k)
+    op5 = Number(matrixVal.g) * Number(matrixVal.i) * Number(matrixVal.n)
+    op6 = Number(matrixVal.g) * Number(matrixVal.m) * Number(matrixVal.j)
+    m14 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 1+4) * m14;
+    return result  
+  }
+  const C21 =()=>{
+    let op1,op2,op3,op4,op5,op6,m21,result;
+    op1 = Number(matrixVal.b) * Number(matrixVal.k) * Number(matrixVal.p)
+    op2 = Number(matrixVal.b) * Number(matrixVal.o) * Number(matrixVal.l)
+    op3 = Number(matrixVal.c) * Number(matrixVal.j) * Number(matrixVal.p)
+    op4 = Number(matrixVal.c) * Number(matrixVal.n) * Number(matrixVal.l)
+    op5 = Number(matrixVal.d) * Number(matrixVal.j) * Number(matrixVal.o)
+    op6 = Number(matrixVal.d) * Number(matrixVal.n) * Number(matrixVal.k)
+    m21 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 2+1) *  m21;
+    return result  
+  }
+  const C22 =()=>{
+    let op1,op2,op3,op4,op5,op6,m22,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.k) * Number(matrixVal.p)
+    op2 = Number(matrixVal.a) * Number(matrixVal.o) * Number(matrixVal.l)
+    op3 = Number(matrixVal.c) * Number(matrixVal.i) * Number(matrixVal.p)
+    op4 = Number(matrixVal.c) * Number(matrixVal.m) * Number(matrixVal.l)
+    op5 = Number(matrixVal.d) * Number(matrixVal.i) * Number(matrixVal.o)
+    op6 = Number(matrixVal.d) * Number(matrixVal.m) * Number(matrixVal.k)
+    m22 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 2+2) *  m22;
+    return result  
+  }
+  const C23 =()=>{
+    let op1,op2,op3,op4,op5,op6,m23,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.j) * Number(matrixVal.p)
+    op2 = Number(matrixVal.a) * Number(matrixVal.n) * Number(matrixVal.l)
+    op3 = Number(matrixVal.b) * Number(matrixVal.i) * Number(matrixVal.p)
+    op4 = Number(matrixVal.b) * Number(matrixVal.m) * Number(matrixVal.l)
+    op5 = Number(matrixVal.d) * Number(matrixVal.i) * Number(matrixVal.n)
+    op6 = Number(matrixVal.d) * Number(matrixVal.m) * Number(matrixVal.j)
+    m23 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 2+3) *  m23;
+    return result  
+  }
+  const C24 =()=>{
+    let op1,op2,op3,op4,op5,op6,m24,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.j) * Number(matrixVal.o)
+    op2 = Number(matrixVal.a) * Number(matrixVal.n) * Number(matrixVal.k)
+    op3 = Number(matrixVal.b) * Number(matrixVal.i) * Number(matrixVal.o)
+    op4 = Number(matrixVal.b) * Number(matrixVal.m) * Number(matrixVal.k)
+    op5 = Number(matrixVal.c) * Number(matrixVal.i) * Number(matrixVal.n)
+    op6 = Number(matrixVal.c) * Number(matrixVal.m) * Number(matrixVal.j)
+    m24 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 2+4) *  m24;
+    return result  
+  }
+  const C31 =()=>{
+    let op1,op2,op3,op4,op5,op6,m31,result;
+    op1 = Number(matrixVal.b) * Number(matrixVal.g) * Number(matrixVal.p)
+    op2 = Number(matrixVal.b) * Number(matrixVal.o) * Number(matrixVal.h)
+    op3 = Number(matrixVal.c) * Number(matrixVal.f) * Number(matrixVal.p)
+    op4 = Number(matrixVal.c) * Number(matrixVal.n) * Number(matrixVal.h)
+    op5 = Number(matrixVal.d) * Number(matrixVal.f) * Number(matrixVal.o)
+    op6 = Number(matrixVal.d) * Number(matrixVal.n) * Number(matrixVal.g)
+    m31 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 3+1) *  m31;
+    return result  
+  }
+  const C32 =()=>{
+    let op1,op2,op3,op4,op5,op6,m32,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.g) * Number(matrixVal.p)
+    op2 = Number(matrixVal.a) * Number(matrixVal.o) * Number(matrixVal.h)
+    op3 = Number(matrixVal.c) * Number(matrixVal.e) * Number(matrixVal.p)
+    op4 = Number(matrixVal.c) * Number(matrixVal.m) * Number(matrixVal.h)
+    op5 = Number(matrixVal.d) * Number(matrixVal.e) * Number(matrixVal.o)
+    op6 = Number(matrixVal.d) * Number(matrixVal.m) * Number(matrixVal.g)
+    m32 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 3+2) *  m32;
+    return result  
+  }
+  const C33 =()=>{
+    let op1,op2,op3,op4,op5,op6,m33,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.f) * Number(matrixVal.p)
+    op2 = Number(matrixVal.a) * Number(matrixVal.n) * Number(matrixVal.h)
+    op3 = Number(matrixVal.b) * Number(matrixVal.e) * Number(matrixVal.p)
+    op4 = Number(matrixVal.b) * Number(matrixVal.m) * Number(matrixVal.h)
+    op5 = Number(matrixVal.d) * Number(matrixVal.e) * Number(matrixVal.n)
+    op6 = Number(matrixVal.d) * Number(matrixVal.m) * Number(matrixVal.f)
+    m33 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 3+3) *  m33;
+    return result  
+  }
+  const C34 =()=>{
+    let op1,op2,op3,op4,op5,op6,m34,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.f) * Number(matrixVal.o)
+    op2 = Number(matrixVal.a) * Number(matrixVal.n) * Number(matrixVal.g)
+    op3 = Number(matrixVal.b) * Number(matrixVal.e) * Number(matrixVal.o)
+    op4 = Number(matrixVal.b) * Number(matrixVal.m) * Number(matrixVal.g)
+    op5 = Number(matrixVal.c) * Number(matrixVal.e) * Number(matrixVal.n)
+    op6 = Number(matrixVal.c) * Number(matrixVal.m) * Number(matrixVal.f)
+    m34 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 3+4) *  m34;
+    return result  
+  }
   const sumbitHandler = (event) => {
     event.preventDefault();
-    const adjoint11 = C11()
+    const adjoint11 = C11();
+    const adjoint12 = C12();
+    const adjoint13 = C13();
+    const adjoint14 = C14();
+    const adjoint21 = C21();
+    const adjoint22 = C22();
+    const adjoint23 = C23();
+    const adjoint24 = C24();
+    const adjoint31 = C31();
+    const adjoint32 = C32();
+    const adjoint33 = C33();
+    const adjoint34 = C34();
+    
     setFinanlResult((preVal)=>(
       {
         ...preVal,
         rc11: adjoint11
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc12: adjoint12
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc13: adjoint13
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc14: adjoint14
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc21: adjoint21
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc22: adjoint22
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc22: adjoint22
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc23: adjoint23
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc24: adjoint24
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc31: adjoint31
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc32: adjoint32
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc33: adjoint33
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc34: adjoint34
       }
     ))
   };
@@ -162,7 +389,17 @@ const FourByFour = () => {
         </div>
       </form>
       <h1>{finalResult.rc11}</h1>
-      
+      <h1>{finalResult.rc12}</h1>
+      <h1>{finalResult.rc13}</h1>
+      <h1>{finalResult.rc14}</h1>
+      <h1>{finalResult.rc21}</h1>
+      <h1>{finalResult.rc22}</h1>
+      <h1>{finalResult.rc23}</h1>
+      <h1>{finalResult.rc24}</h1>
+      <h1>{finalResult.rc31}</h1>
+      <h1>{finalResult.rc32}</h1>
+      <h1>{finalResult.rc33}</h1>
+      <h1>{finalResult.rc34}</h1>
     </div>
   );
 };
