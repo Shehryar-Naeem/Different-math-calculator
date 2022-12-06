@@ -32,6 +32,10 @@ const FourByFour = () => {
     rc32: "",
     rc33: "",
     rc34: "",
+    rc41: "",
+    rc42: "",
+    rc43: "",
+    rc44: ""
   })
   const inputEventHandler = (event) => {
     const { name, value } = event.target;
@@ -186,6 +190,54 @@ const FourByFour = () => {
     result = Math.pow(-1 , 3+4) *  m34;
     return result  
   }
+  const C41 =()=>{
+    let op1,op2,op3,op4,op5,op6,m41,result;
+    op1 = Number(matrixVal.b) * Number(matrixVal.g) * Number(matrixVal.l)
+    op2 = Number(matrixVal.b) * Number(matrixVal.k) * Number(matrixVal.h)
+    op3 = Number(matrixVal.c) * Number(matrixVal.f) * Number(matrixVal.l)
+    op4 = Number(matrixVal.c) * Number(matrixVal.j) * Number(matrixVal.h)
+    op5 = Number(matrixVal.d) * Number(matrixVal.f) * Number(matrixVal.k)
+    op6 = Number(matrixVal.d) * Number(matrixVal.j) * Number(matrixVal.g)
+    m41 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 4+1) *  m41;
+    return result  
+  }
+  const C42 =()=>{
+    let op1,op2,op3,op4,op5,op6,m42,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.g) * Number(matrixVal.l)
+    op2 = Number(matrixVal.a) * Number(matrixVal.k) * Number(matrixVal.h)
+    op3 = Number(matrixVal.c) * Number(matrixVal.e) * Number(matrixVal.l)
+    op4 = Number(matrixVal.c) * Number(matrixVal.i) * Number(matrixVal.h)
+    op5 = Number(matrixVal.d) * Number(matrixVal.e) * Number(matrixVal.k)
+    op6 = Number(matrixVal.d) * Number(matrixVal.i) * Number(matrixVal.g)
+    m42 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 4+2) *  m42;
+    return result  
+  }
+  const C43 =()=>{
+    let op1,op2,op3,op4,op5,op6,m43,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.f) * Number(matrixVal.l)
+    op2 = Number(matrixVal.a) * Number(matrixVal.j) * Number(matrixVal.h)
+    op3 = Number(matrixVal.b) * Number(matrixVal.e) * Number(matrixVal.l)
+    op4 = Number(matrixVal.b) * Number(matrixVal.i) * Number(matrixVal.h)
+    op5 = Number(matrixVal.d) * Number(matrixVal.e) * Number(matrixVal.j)
+    op6 = Number(matrixVal.d) * Number(matrixVal.i) * Number(matrixVal.f)
+    m43 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 4+3) *  m43;
+    return result  
+  }
+  const C44 =()=>{
+    let op1,op2,op3,op4,op5,op6,m44,result;
+    op1 = Number(matrixVal.a) * Number(matrixVal.f) * Number(matrixVal.k)
+    op2 = Number(matrixVal.a) * Number(matrixVal.j) * Number(matrixVal.g)
+    op3 = Number(matrixVal.b) * Number(matrixVal.e) * Number(matrixVal.k)
+    op4 = Number(matrixVal.b) * Number(matrixVal.i) * Number(matrixVal.g)
+    op5 = Number(matrixVal.c) * Number(matrixVal.e) * Number(matrixVal.j)
+    op6 = Number(matrixVal.c) * Number(matrixVal.i) * Number(matrixVal.f)
+    m44 = op1 - op2 - op3 + op4 + op5 - op6;
+    result = Math.pow(-1 , 4+4) *  m44;
+    return result  
+  }
   const sumbitHandler = (event) => {
     event.preventDefault();
     const adjoint11 = C11();
@@ -200,6 +252,11 @@ const FourByFour = () => {
     const adjoint32 = C32();
     const adjoint33 = C33();
     const adjoint34 = C34();
+    const adjoint41 = C41();
+    const adjoint42 = C42();
+    const adjoint43 = C43();
+    const adjoint44 = C44();
+    
     
     setFinanlResult((preVal)=>(
       {
@@ -277,6 +334,30 @@ const FourByFour = () => {
       {
         ...preVal,
         rc34: adjoint34
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc41: adjoint41
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc42: adjoint42
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc43: adjoint43
+      }
+    ))
+    setFinanlResult((preVal)=>(
+      {
+        ...preVal,
+        rc44: adjoint44
       }
     ))
   };
@@ -400,6 +481,10 @@ const FourByFour = () => {
       <h1>{finalResult.rc32}</h1>
       <h1>{finalResult.rc33}</h1>
       <h1>{finalResult.rc34}</h1>
+      <h1>{finalResult.rc41}</h1>
+      <h1>{finalResult.rc42}</h1>
+      <h1>{finalResult.rc43}</h1>
+      <h1>{finalResult.rc44}</h1>
     </div>
   );
 };
