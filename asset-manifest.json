@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Different-math-calculator/static/css/main.cb8792c5.css",
+    "main.js": "/Different-math-calculator/static/js/main.061994fd.js",
+    "static/media/sun.png": "/Different-math-calculator/static/media/sun.fec17bb98889427d7b6a.png",
+    "static/media/mathProject.png": "/Different-math-calculator/static/media/mathProject.04d0052afed86776e1a7.png",
+    "static/media/moon.png": "/Different-math-calculator/static/media/moon.0154e181a26c5edd081c.png",
+    "index.html": "/Different-math-calculator/index.html",
+    "main.cb8792c5.css.map": "/Different-math-calculator/static/css/main.cb8792c5.css.map",
+    "main.061994fd.js.map": "/Different-math-calculator/static/js/main.061994fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb8792c5.css",
+    "static/js/main.061994fd.js"
+  ]
+}
