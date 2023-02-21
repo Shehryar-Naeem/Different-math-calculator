@@ -9,7 +9,23 @@ const TwobyTwo = () => {
     c:"",
     d:"", 
   })
-
+  const inpTag= document.querySelectorAll(".inp")
+  for(let i=0;i<inpTag.length;i++){
+    inpTag[i].addEventListener("keyup",function(e){
+      console.log(e);
+      if (e.keyCode === 39) {
+        e.preventDefault();
+        if (this.nextElementSibling===inpTag[i+1]) {
+            this.nextElementSibling.focus();
+        }
+    }else if(e.keyCode===37){
+      e.preventDefault();
+      if(this.previousElementSibling===inpTag[i-1]){
+        this.previousElementSibling.focus();
+      }
+    }
+    })
+  }
   const [finalResult, setFinanlResult] = useState("")
 
   const inputEventHandler=(event)=>{
@@ -48,10 +64,10 @@ const TwobyTwo = () => {
     <div className="input_grid_two">
       <form onSubmit={submitHandler}>
         <div className="input_grid">
-        <input type="number" name="a" value={matrixVal.a} onChange={inputEventHandler}/>
-        <input type="number" name="b" value={matrixVal.b} onChange={inputEventHandler}/>
-        <input type="number" name="c" value={matrixVal.c} onChange={inputEventHandler}/>
-        <input type="number" name="d" value={matrixVal.d} onChange={inputEventHandler}/>
+        <input type="number" className="inp" name="a" value={matrixVal.a} onChange={inputEventHandler}/>
+        <input type="number"  className="inp" name="b" value={matrixVal.b} onChange={inputEventHandler}/>
+        <input type="number" className="inp" name="c" value={matrixVal.c} onChange={inputEventHandler}/>
+        <input type="number" className="inp" name="d" value={matrixVal.d} onChange={inputEventHandler}/>
         </div>
         <div className="btn">
           <button type="submit"><i></i><span>solution</span></button>

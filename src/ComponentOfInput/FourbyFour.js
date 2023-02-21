@@ -20,6 +20,23 @@ const FourByFour = () => {
     p: "",
   });
   const [finalResult,setFinanlResult]= useState("")
+  const inpTag= document.querySelectorAll(".inp")
+  for(let i=0;i<inpTag.length;i++){
+    inpTag[i].addEventListener("keyup",function(e){
+      console.log(e);
+      if (e.keyCode === 39) {
+        e.preventDefault();
+        if (this.nextElementSibling===inpTag[i+1]) {
+            this.nextElementSibling.focus();
+        }
+    }else if(e.keyCode===37){
+      e.preventDefault();
+      if(this.previousElementSibling===inpTag[i-1]){
+        this.previousElementSibling.focus();
+      }
+    }
+    })
+  }
   const inputEventHandler = (event) => {
     const { name, value } = event.target;
     setMatrixVal((preVal) => {
@@ -29,6 +46,7 @@ const FourByFour = () => {
       };
     });
   };
+
   const determinantResult= ()=>{
     let op1,op2,op3,op4,op5,op6,op7,op8,op9,op10,op11,op12,op13,op14,op15,op16,op17,op18,op19,op20,op21,op22,op23,op24;
 
@@ -75,96 +93,112 @@ const FourByFour = () => {
             type="number"
             name="a"
             value={matrixVal.a}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="b"
             value={matrixVal.b}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="c"
             value={matrixVal.c}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="d"
             value={matrixVal.d}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="e"
             value={matrixVal.e}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="f"
             value={matrixVal.f}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="g"
             value={matrixVal.g}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="h"
             value={matrixVal.h}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="i"
             value={matrixVal.i}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="j"
             value={matrixVal.j}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="k"
             value={matrixVal.k}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="l"
             value={matrixVal.l}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="m"
             value={matrixVal.m}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="n"
             value={matrixVal.n}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="o"
             value={matrixVal.o}
+            className="inp"
             onChange={inputEventHandler}
           />
           <input
             type="number"
             name="p"
             value={matrixVal.p}
+            className="inp"
             onChange={inputEventHandler}
           />
         </div>

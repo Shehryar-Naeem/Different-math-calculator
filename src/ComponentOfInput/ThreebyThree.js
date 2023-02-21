@@ -14,6 +14,17 @@ const ThreeByThree = () => {
     i:"",
   })
   const [finalVal,setFinalVal]=useState("")
+  const inpTag= document.querySelectorAll(".inp")
+  for(let i=0;i<inpTag.length;i++){
+    inpTag[i].addEventListener("keyup",function(e){
+      if (e.keyCode === 39) {
+        e.preventDefault();
+        if (this.nextElementSibling===inpTag[i+1]) {
+            this.nextElementSibling.focus();
+        }
+    }
+    })
+  }
   const inputEventHandler=(e)=>{
     const {name,value}= e.target;
     setMatrixVal(preVal=>{
@@ -47,15 +58,15 @@ const ThreeByThree = () => {
     <div className="input_grid_three">
       <form onSubmit={submitHandler}>
         <div className="input_grid">
-          <input type="number" name="a" value={matrixVal.a} onChange={inputEventHandler}/>
-          <input type="number" name="b" value={matrixVal.b} onChange={inputEventHandler}/>
-          <input type="number" name="c" value={matrixVal.c} onChange={inputEventHandler}/>
-          <input type="number" name="d" value={matrixVal.d} onChange={inputEventHandler}/>
-          <input type="number" name="e" value={matrixVal.e} onChange={inputEventHandler}/>
-          <input type="number" name="f" value={matrixVal.f} onChange={inputEventHandler}/>
-          <input type="number" name="g" value={matrixVal.g} onChange={inputEventHandler}/>
-          <input type="number" name="h" value={matrixVal.h} onChange={inputEventHandler}/>
-          <input type="number" name="i" value={matrixVal.i} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="a" value={matrixVal.a} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="b" value={matrixVal.b} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="c" value={matrixVal.c} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="d" value={matrixVal.d} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="e" value={matrixVal.e} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="f" value={matrixVal.f} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="g" value={matrixVal.g} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="h" value={matrixVal.h} onChange={inputEventHandler}/>
+          <input type="number" className="inp" name="i" value={matrixVal.i} onChange={inputEventHandler}/>
         </div>
 
         <div className="btn">
